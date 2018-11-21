@@ -1,5 +1,6 @@
 #!/bin/bash
 
+clear;
 user=$USER
 pcId="@monitoredPrompt-shell"
 corUser=`tput setaf 1`
