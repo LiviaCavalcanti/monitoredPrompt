@@ -17,7 +17,8 @@ function get_dir {
 while read -e -p "${corUser}${negrito}${user}${pcId}${limpa}:${corDir}${negrito}~$(get_dir)${limpa}$ " comando 
 do
 	#TODO CONTAR QUANTO TEMPO O PROGRAMA DEMOROU COM O TIME
-	$comando
+
+	echo $comando | time -a -o log.txt -f "O usuario $user executou o comando: $comando. TIME do comando: %E real, %U user, %S sys" bash; 
 
 
 done
