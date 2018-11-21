@@ -1,10 +1,19 @@
 #!/bin/bash
-while [ 1 ]
+
+user=$USER
+pcId="@monitoredPrompt-shell"
+
+
+function get_dir {
+    dir=$(pwd | awk -F $HOME '{print $2}')
+
+    echo $dir
+}
+
+while read -p "${user}${pcId}:~$(get_dir)$ " comando 
 do
-	#TODO TRATAR O NOME DO USUARIO E A MAQUINA
-	read -p "usuario@lcc1-02:~$: "comando
-	echo time
+	#TODO CONTAR QUANTO TEMPO O PROGRAMA DEMOROU COM O TIME
 	$comando
-	echo time
+
 
 done
