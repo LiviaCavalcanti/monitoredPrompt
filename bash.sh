@@ -10,7 +10,7 @@ function get_dir {
     echo $dir
 }
 
-while read -p "${user}${pcId}:~$(get_dir)$ " comando 
+while read -e -p "${user}${pcId}:~$(get_dir)$ " comando 
 do
 	#TODO CONTAR QUANTO TEMPO O PROGRAMA DEMOROU COM O TIME
 	$comando
