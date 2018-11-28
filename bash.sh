@@ -27,7 +27,7 @@ do
 		then
 			${comando[@]}
 		else
-			date=`date +%F`
+			date=`date +%d-%m-%Y`
 			echo ${comando[@]} | time -a -o $diretorioDoSH -f "O usuario $user executou o comando: $comando. TIME do comando: %E real, %U user, %S sys. Em: $date" bash
 		fi
 	fi
